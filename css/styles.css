@@ -1,42 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
- 
+ *{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+ }
+ body{background-color: rgb(3, 27, 93);}
 .container{
-    display: grid;
-    grid-template-rows: repeat(7, 2fr);
-    margin: 10px;
+    display: flex;
+
     background-color: rgb(250, 244, 237);
-    text-align: center;}
-   
-body{background-color: rgb(3, 27, 93);}
+    text-align: center;
+    display:none;
+    width: 100vw;
+}
 .container > div {
     display: flex;
     text-decoration: none;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    padding: 15px;
-    margin: 5px 2px;
+    padding: 5px;
+    margin: 5px;
     box-shadow: 0px 2px 5px #eaeaea;
 }
 .container i{
-    font-size: 40px;
+    font-size: 25px;
     color:rgb(15, 0, 97);
 }
 .container a{
     color: rgb(80, 7, 175);
     padding: 10px 0 0;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Anton', sans-serif;
     text-shadow: 3px 3px 3px #dfdddd;
 }
 .container a:hover{
     color: violet;
 }
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0%;
+}
+#chk-menu{
+    display: none;
+    }
+#chk-menu:checked ~ .container{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    }
+.btn-menu{
+     color: white;
+    font-size:25px;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-menu:hover{
+    color:rgb(250, 244, 237) ;
+}
  
 @media screen and (min-width:800px){
+    nav{
+        display:flex;
+        flex-direction: row;
+    }
+    .btn-menu{
+        display: none;
+    }
     .container{
-        display: grid;
-        grid-template-columns: repeat(7, 2fr);
-        }
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
 }
