@@ -7,7 +7,6 @@
  body{background-color: rgb(3, 27, 93);}
 .container{
     display: flex;
-
     background-color: rgb(250, 244, 237);
     text-align: center;
     display:none;
@@ -43,7 +42,7 @@ nav{
     flex-direction: column;
     justify-content:center;
     align-items: flex-start;
-    position: fixed;
+    position: static;
     top: 0%;
 }
 #chk-menu{
@@ -63,7 +62,50 @@ nav{
 .btn-menu:hover{
     color:rgb(250, 244, 237) ;
 }
- 
+/*banner*/
+.slider{
+    width: 100%;
+    background-color:aliceblue;
+    overflow: hidden;
+}
+.slider-ul{
+    height: 500px;
+    width: 400%;
+    display: flex;
+    animation: slide 30s infinite linear;
+    border: 2px solid salmon;
+}
+.slider-li{
+    height: 100%;
+    width: 25%;
+    border: 2px solid yellow;
+}
+.slider-li:nth-child(1){
+    background-color: coral;
+}
+.slider-li:nth-child(2){
+    background-color: darksalmon;
+}
+.slider-li:nth-child(3){
+    background-color: red;
+}
+.slider-li:nth-child(4){
+    background-color: darkred;
+}
+@keyframes slide{
+    25%{
+      transform: translateX(-100%);  
+    }
+    50%{
+        transform: translateX(-200%);  
+      }
+    75%{
+        transform: translateX(-300%);  
+      }
+    100%{
+        transform: translateX(-400%);  
+      }
+}
 @media screen and (min-width:800px){
     nav{
         display:flex;
